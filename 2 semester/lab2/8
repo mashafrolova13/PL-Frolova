@@ -1,0 +1,20 @@
+public class App {
+    public static void main(String[] args) {
+        String input = "AbccAaR";
+
+        int upperCaseCount = 0, lowerCaseCount = 0;
+        
+        for (char c : input.toCharArray()) {
+            if (Character.isUpperCase(c)) {
+                upperCaseCount++;
+            } else {
+                lowerCaseCount++;
+            }
+        }
+        if (upperCaseCount > lowerCaseCount) {
+            System.out.println(input.toUpperCase());
+        } else {
+            System.out.println(input.toLowerCase());
+        }
+    }
+}
