@@ -1,0 +1,9 @@
+public class App {
+    public static void main(String[] args) {
+        String input = "люблюучиться";
+        
+        String result = input.replaceAll("[аеёиоуыэюяАЕЁИОУЫЭЮЯ]", "");
+
+        System.out.println(result);
+    }
+}
