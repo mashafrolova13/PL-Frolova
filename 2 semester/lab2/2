@@ -1,0 +1,9 @@
+public class App {
+    public static void main(String[] args) {
+        String name = "mASHa";
+        
+        String formattedName = name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
+
+        System.out.println("Привет, " + formattedName + "!");
+    }
+}
