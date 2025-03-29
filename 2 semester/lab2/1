@@ -1,1 +1,10 @@
+public class App {
+    public static void main(String[] args) {
+        String str1 = "abc";
+        String str2 = "bc";
+
+        boolean result = str1.endsWith(str2);
+        System.out.println(result);
+    }
+}
 
