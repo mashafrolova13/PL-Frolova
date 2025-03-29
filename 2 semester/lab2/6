@@ -1,0 +1,28 @@
+import java.util.PriorityQueue;
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        PriorityQueue<Integer> memory = new PriorityQueue<>(); // Очередь для хранения 3 чисел
+
+        System.out.println("Введите числа (введите '0' для завершения):");
+        
+        while (true) {
+            int num = scanner.nextInt();
+
+            if (num == 0) break; // Остановка по вводу '0'
+
+            if (memory.size() < 3) {
+                memory.add(num); // Заполняем пустые ячейки
+            } else if (num > memory.peek()) {
+                memory.poll(); // Удаляем наименьшее
+                memory.add(num);
+            }
+        }
+
+        scanner.close();
+
+        System.out.println("Три наибольших числа: " + memory);
+    }
+}
