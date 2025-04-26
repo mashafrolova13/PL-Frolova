@@ -1,0 +1,14 @@
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> players = new ArrayList<>();
+        for (int i = 1; i <= 7; i++) players.add(i);
+        int index = 0;
+        while (!players.isEmpty()) {
+            index = (index + 2) % players.size();
+            System.out.print(players.remove(index) + " ");
+        }
+        System.out.println();
+    }
+}
