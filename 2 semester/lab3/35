@@ -1,0 +1,18 @@
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+        String[] arr = {"56", "65", "74", "100", "99", "68", "86", "180", "90"};
+        Arrays.sort(arr, (a, b) -> {
+            int sumA = 0, sumB = 0;
+            for (char c : a.toCharArray()) sumA += c - '0';
+            for (char c : b.toCharArray()) sumB += c - '0';
+            if (sumA != sumB) return sumA - sumB;
+            return a.compareTo(b);
+        });
+        for (String num : arr) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+}
