@@ -1,0 +1,16 @@
+public class Main {
+    public static void main(String[] args) {
+        long sticks = 10;
+        boolean tanyaMove = true;
+        while (sticks > 0) {
+            if (sticks % 2 == 0) sticks /= 2;
+            else sticks -= 1;
+            tanyaMove = !tanyaMove;
+        }
+        if (!tanyaMove) {
+            System.out.println("Таня победила");
+        } else {
+            System.out.println("Таня проиграла");
+        }
+    }
+}
