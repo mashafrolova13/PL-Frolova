@@ -1,0 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
+        String sentence = "Привет мир";
+        String[] words = sentence.split(" ");
+        for (String word : words) {
+            if (word.matches("[а-яА-Я]+")) {
+                System.out.print(word.substring(1) + word.charAt(0) + "ауч ");
+            } else {
+                System.out.print(word + " ");
+            }
+        }
+    }
+}
