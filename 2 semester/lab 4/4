@@ -1,0 +1,33 @@
+public class Main {
+    public static void main(String[] args) {
+        int[] u = new int[100];
+        u[0] = 1; 
+        int size = 1;
+
+        for (int i = 0; size < 20; i++) {
+            int x = u[i];
+            int y = 2 * x + 1;
+            int z = 3 * x + 1;
+
+            if (!contains(u, size, y)) {
+                u[size] = y;
+                size++;
+            }
+            if (!contains(u, size, z)) {
+                u[size] = z;
+                size++;
+            }
+        }
+
+        for (int i = 0; i < 20; i++) {
+            System.out.print(u[i] + " ");
+        }
+    }
+
+    public static boolean contains(int[] arr, int size, int val) {
+        for (int i = 0; i < size; i++) {
+        if (arr[i] == val) return true;
+        }
+        return false;
+    }
+}
